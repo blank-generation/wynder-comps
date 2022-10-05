@@ -15,7 +15,7 @@ export default function PostTabs() {
             }}>
                 <Button style={personalFeed ? styles.activeTab : styles.inactiveTab}
                     onPress={() => {
-                        setPersonalFeed(!personalFeed);
+                        setPersonalFeed(true);
                         if (generalFeed) {
                             setGeneralFeed(!generalFeed);
                         }
@@ -26,7 +26,7 @@ export default function PostTabs() {
                 <Button style={generalFeed ? styles.activeTab : styles.inactiveTab}
                 
                 onPress={() => {
-                    setGeneralFeed(!generalFeed);
+                    setGeneralFeed(true);
                     if (personalFeed) {
                         setPersonalFeed(!personalFeed);
                     }

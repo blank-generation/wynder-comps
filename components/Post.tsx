@@ -17,7 +17,7 @@ const Post: React.FC = (props) => {
     } else {
         LeftContent = props => <Avatar.Icon {...props} icon="account" />
     }
-// ---------------------------- Post Menu ----------------------------------------
+    // ---------------------------- Post Menu ----------------------------------------
     const RightContent = props =>
         <Menu
             visible={visible}
@@ -33,8 +33,9 @@ const Post: React.FC = (props) => {
     const [unlike, setUnlike] = useState(false);
     let postcontent = props.PostContent;
     let readMore = false;
-// ------------------------- Read More Logic -------------------------------------------
-    if (postcontent.length > 100) {
+    // ------------------------- Read More Logic -------------------------------------------
+
+    if (postcontent.length > 100 && !props.Expanded) {
         postcontent = postcontent.slice(0, 100);
         readMore = true;
     }
@@ -52,20 +53,20 @@ const Post: React.FC = (props) => {
                 borderRadius: '12px'
             }}>
                 {/* ---------------------- Name, Avatar and Menu ------------------------- */}
-                <Card.Title  titleStyle={{
-                    fontWeight:'600',
-                    color:'#FF595D'
+                <Card.Title titleStyle={{
+                    fontWeight: '600',
+                    color: '#FF595D'
                 }}
                     title={props.FeedName}
                     subtitle={props.RealName}
                     left={LeftContent}
                     right={RightContent} />
-                    {/* ------------------------ Post content ------------------------------- */}
+                {/* ------------------------ Post content ------------------------------- */}
                 <Card.Content>
                     <Paragraph>
                         {postcontent}
-                        ...
-                        {readMore && <a href='#'>read more</a>}
+
+                        {readMore && <div> ...<a href='#'>read more</a></div>}
                     </Paragraph>
                 </Card.Content>
                 {/* <Card.Actions></Card.Actions> */}

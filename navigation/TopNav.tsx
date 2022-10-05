@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Surface, IconButton, Avatar, Switch, Button, ToggleButton } from 'react-native-paper';
+import { Surface, IconButton, Avatar} from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 import './TopNav.css'
 

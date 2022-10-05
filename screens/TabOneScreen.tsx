@@ -24,8 +24,17 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
           RealName={realName}
           FeedName={feedName}
           CommentNum={2}
-
+          Expanded={false}
         />
+         <Post
+          PostContent={postContent}
+          DisplayPicture={dp}
+          RealName={realName}
+          FeedName={feedName}
+          CommentNum={2}
+          Expanded={false}
+        />
+        
 
       </ScrollView>
     </View>

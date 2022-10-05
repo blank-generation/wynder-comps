@@ -3,10 +3,12 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider as PaperProvider, MD3LightTheme as DefaultTheme } from 'react-native-paper';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
-import Navigation from './navigation';
+import TabTwoScreen from './screens/TabTwoScreen';
 import TabOneScreen from './screens/TabOneScreen';
 import TopNav from './navigation/TopNav';
 import BottomNav from './navigation/BottomNav';
+import {ScrollView} from 'react-native';
+
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -31,12 +33,13 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <PaperProvider theme={theme}>
-        <TopNav/>
-          <TabOneScreen />
+          
+          <TopNav />
+          {/* <TabOneScreen /> */}
+          <TabTwoScreen/>
+          
           {/* <Navigation colorScheme="light" /> */}
-
-          {/* <StatusBar /> */}
-        <BottomNav/>
+          <BottomNav />
         </PaperProvider>
       </SafeAreaProvider>
     );
