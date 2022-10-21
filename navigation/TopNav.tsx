@@ -15,7 +15,7 @@ export default function TopNav() {
             <div className="container">
                 <div className="selector">
                     <div className="selecotr-item">
-                        <input type="radio" id="radio1" name="selector" className="selector-item_radio" checked />
+                        <input type="radio" id="radio1" name="selector" className="selector-item_radio" defaultChecked />
                         <label htmlFor="radio1" className="selector-item_label">FEED</label>
                     </div>
                     <div className="selecotr-item">

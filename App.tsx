@@ -7,8 +7,14 @@ import TabTwoScreen from './screens/TabTwoScreen';
 import TabOneScreen from './screens/TabOneScreen';
 import TopNav from './navigation/TopNav';
 import BottomNav from './navigation/BottomNav';
-import {ScrollView} from 'react-native';
+import { ScrollView } from 'react-native';
+import Onboard from './screens/Onboard';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MatchSection from './screens/MatchSection';
 
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -33,11 +39,13 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <PaperProvider theme={theme}>
-          
+
           <TopNav />
           {/* <TabOneScreen /> */}
-          <TabTwoScreen/>
-          
+          {/* <TabTwoScreen/> */}
+ 
+          {/* <Onboard /> */}
+          <MatchSection/>
           {/* <Navigation colorScheme="light" /> */}
           <BottomNav />
         </PaperProvider>
